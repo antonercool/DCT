@@ -52,6 +52,33 @@ The ECG signal that the mote will be compression is the following signal of size
   * mse(x,x_recovered) = 0.1190
 
 
+## DCT: N = 512 and M = 120
+**Results from recovered DCT coefficients from Telos B mote**
+
+![Screenshot](images/M120.PNG)
+
+**execution time**
+* X seconds
+* X/60 = 44,31 mins 
+
+**energy consumption**
+* CPU time consumtion = X*26.1 uA = 69,399 mA
+  * Currently the algortihm takes way to long (cos(SomeBigNumber) is very slow) 
+
+**Mean square error between the original signal and reconstructed signal**
+* From matlab: 
+  * mse(x,x_recovered) = 0.1554
+
+
+## Conclusion ##
+Sensor nodes can use more time of the CPU and less time on the atenna by compressing the signal using DCT. Depending of how precise the signal values needs to be at the rechiever side, we can adjust the size of M. 
+* low M   = faster transmission/less quality
+* high M  = slower transmission/better quality
+
+The recovery of the ECG signal was a succes, but the time taken to produce the DCT compression on mote is way to expenssive. The time for Cos(SomeBigNumer) is the overhead in the function. 
+
+When both n & k gets big, the compression will have to take cosine of a big number meaning the algorithm will be slower and slower when we choose a higer signal size N. Instead of taking cosine of some big number, which is very slow. Take cosine of a number that are approximaly the same cosine output as the big number (**For future work**) 
+
 
 ## Build commands ##
 Make and upload telos b
