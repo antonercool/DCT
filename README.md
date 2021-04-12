@@ -34,11 +34,11 @@ The ECG signal that the mote will be compression is the following signal of size
 
 ![Screenshot](images/M75.PNG)
 
-**execution time**
+**Execution time**
 * 2659 seconds
 * 2659/60 = 44,31 mins 
 
-**energy consumption**
+**Energy consumption**
 
 ![Screenshot](images/energy.PNG)
 * Receive mode/transmission mode takes around the same amount of energy
@@ -57,11 +57,11 @@ The ECG signal that the mote will be compression is the following signal of size
 
 ![Screenshot](images/M120.PNG)
 
-**execution time**
+**Execution time**
 * X seconds
 * X/60 = 44,31 mins 
 
-**energy consumption**
+**Energy consumption**
 * CPU time consumtion = X*26.1 uA = 69,399 mA
   * Currently the algortihm takes way to long (cos(SomeBigNumber) is very slow) 
 
@@ -71,11 +71,11 @@ The ECG signal that the mote will be compression is the following signal of size
 
 
 ## Conclusion ##
-Sensor nodes can use more time of the CPU and less time on the atenna by compressing the signal using DCT. Depending of how precise the signal values needs to be at the rechiever side, we can adjust the size of M. 
-* low M   = faster transmission/less quality
-* high M  = slower transmission/better quality
+Sensor nodes can use more time of the CPU and less time on the atenna by compressing the signal using DCT. Depending of how precise the signal values needs to be at the receiver side, we can adjust the size of M. 
+* small M = faster transmission/less quality
+* big M   = slower transmission/better quality
 
-The recovery of the ECG signal was a succes, but the time taken to produce the DCT compression on mote is way to expenssive. The time for Cos(SomeBigNumer) is the overhead in the function. 
+The recovery of the ECG signal was a succes, but the time taken to produce the DCT compression on mote was way to expenssive. The time for *cos(SomeBigNumer)* is the overhead in the algorithm. 
 
 When both n & k gets big, the compression will have to take cosine of a big number meaning the algorithm will be slower and slower when we choose a higer signal size N. Instead of taking cosine of some big number, which is very slow. Take cosine of a number that are approximaly the same cosine output as the big number (**For future work**) 
 
