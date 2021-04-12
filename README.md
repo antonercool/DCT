@@ -58,11 +58,11 @@ The ECG signal that the mote will be compression is the following signal of size
 ![Screenshot](images/M120.PNG)
 
 **Execution time**
-* X seconds
-* X/60 = 44,31 mins 
+* 14951  seconds
+* 14951/60 = 249 mins 
 
 **Energy consumption**
-* CPU time consumtion = X*26.1 uA = 69,399 mA
+* CPU time consumtion = 14951*26.1 uA = 390 mA
   * Currently the algortihm takes way to long (cos(SomeBigNumber) is very slow) 
 
 **Mean square error between the original signal and reconstructed signal**
