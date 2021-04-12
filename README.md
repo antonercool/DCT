@@ -30,15 +30,15 @@ The ECG signal that the mote will be compression is the following signal of size
 
 
 ## DCT: N = 256 and M = 75
-*Results from recovered DCT coefficients from Telos B mote*
+**Results from recovered DCT coefficients from Telos B mote**
 
 ![Screenshot](images/M75.PNG)
 
-*execution time*
+**execution time**
 * 2659 seconds
 * 2659/60 = 44,31 mins 
 
-*energy consumption*
+**energy consumption**
 
 ![Screenshot](images/energy.PNG)
 * Receive mode/transmission mode takes around the same amount of energy
@@ -47,7 +47,7 @@ The ECG signal that the mote will be compression is the following signal of size
 * CPU time consumtion = 2659*26.1 uA = 69,399 mA
  * Currently the algortihm takes way to long (cos(SomeBigNumber) is very slow) 
 
-** Mean square error between the original signal and reconstructed signal **
+**Mean square error between the original signal and reconstructed signal**
 * From matlab: 
  * mse(x,x_recovered) = 0.1190
 
