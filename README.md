@@ -49,7 +49,7 @@ The ECG signal that the mote will be compression is the following signal of size
 
 **Mean square error between the original signal and reconstructed signal**
 * From matlab: 
- * mse(x,x_recovered) = 0.1190
+  * mse(x,x_recovered) = 0.1190
 
 
 
