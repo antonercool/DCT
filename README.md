@@ -2,8 +2,13 @@
 The following exercieses, data compression using discrete cosine transform (DCT) time-series signals. For testing electrocardiogram (ECG) signals will be
 used. DCT-II transform of a length N signal x is given as
 
-![Screenshot](images/screenshot.png)
+![Screenshot](images/formular.PNG)
+where y_k is the k'th DCT coefficient of the signal, x, for a particular k. It can be also
+be rewritten in the matrix form as
 
+The ECG signal that the mote will be compression is the following signal of size N=512
+
+![Screenshot](images/ecg.PNG)
 
 ## Build commands ##
 Make and upload telos b
@@ -33,6 +38,18 @@ local sky build
 ```
 
 
+## Goal for this exercise
+
+* Implement and measure the execution time and energy consumption for the following cases, where N = Signal length, M = DCT coefficients 
+  * N = 256 and M = 75
+  * N = 512 and M = 120
+*  Measure the mean square error between the original signal and reconstructed signal for both the cases.
+
+*Optimization possibilities*
+* Pi/N is a constant, and should only be calculated once (**Implemented**)
+* When both n & k gets big, the compression wil have to take cosine of a big number meaning the algorithm will be slower and slower when we choose a higer signal size N. Instead of taking cosine of some big number, which is very slow. Take cosine of a number that are approximaly the same cosine output as the big number (**Not implemented**) 
+
+
 ## Password Recording ##
 *Secret password recording*
 * At program start a led indicater will blink 3 times.
@@ -59,71 +76,4 @@ local sky build
 ## Signal ##
 Since the storage logic, each signal will have the following form indicated by the example with 2 button presses with 2 time slots
 
-```
-Button press
-^
-|      |       |
-|      |       |
-|      |       |
-|      |       |
-|      |       |
-|      |       |
-|      |       |
-|      |       |
-|      |       |
-|      |       |
-L______|_______|______________________________________________________________________ >ticks
-      128     256     384     512     640     768     896     1024     1152     1280    
-```
 
-
-### Log from program ### 
-Accetance threshold of min cost is set of 6. An acccetance lvl of 6 came from experiments
-
-```
-00:48.526	ID:1	[DBG : Knock     ] Current login is : 
-00:48.528	ID:1	1-1-0-0-0-0-0-0-0-0-0-0-0-
-00:48.587	ID:1	[DBG : Knock     ] printing dist matrix:
-00:48.591	ID:1	0 	0 	1 	1 	1 	1 	1 	1 	1 	1 	1 	1 	1 	
-00:48.595	ID:1	0 	0 	1 	1 	1 	1 	1 	1 	1 	1 	1 	1 	1 	
-00:48.600	ID:1	1 	1 	0 	0 	0 	0 	0 	0 	0 	0 	0 	0 	0 	
-00:48.604	ID:1	1 	1 	0 	0 	0 	0 	0 	0 	0 	0 	0 	0 	0 	
-00:48.608	ID:1	1 	1 	0 	0 	0 	0 	0 	0 	0 	0 	0 	0 	0 	
-00:48.612	ID:1	1 	1 	0 	0 	0 	0 	0 	0 	0 	0 	0 	0 	0 	
-00:48.616	ID:1	1 	1 	0 	0 	0 	0 	0 	0 	0 	0 	0 	0 	0 	
-00:48.620	ID:1	1 	1 	0 	0 	0 	0 	0 	0 	0 	0 	0 	0 	0 	
-00:48.624	ID:1	1 	1 	0 	0 	0 	0 	0 	0 	0 	0 	0 	0 	0 	
-00:48.628	ID:1	1 	1 	0 	0 	0 	0 	0 	0 	0 	0 	0 	0 	0 	
-00:48.632	ID:1	1 	1 	0 	0 	0 	0 	0 	0 	0 	0 	0 	0 	0 	
-00:48.636	ID:1	1 	1 	0 	0 	0 	0 	0 	0 	0 	0 	0 	0 	0 	
-00:48.640	ID:1	1 	1 	0 	0 	0 	0 	0 	0 	0 	0 	0 	0 	0 	
-00:48.655	ID:1	[DBG : Knock     ] Calculationg cost matrix was a succes 
-00:48.659	ID:1	0 	0 	1 	1 	1 	2 	1 	1 	1 	1 	1 	1 	1 	
-00:48.663	ID:1	0 	0 	1 	2 	2 	2 	2 	2 	2 	2 	2 	2 	2 	
-00:48.667	ID:1	1 	1 	0 	0 	0 	0 	0 	0 	0 	0 	0 	0 	0 	
-00:48.671	ID:1	2 	2 	0 	0 	0 	0 	0 	0 	0 	0 	0 	0 	0 	
-00:48.675	ID:1	3 	3 	0 	0 	0 	0 	0 	0 	0 	0 	0 	0 	0 	
-00:48.679	ID:1	4 	4 	0 	0 	0 	0 	0 	0 	0 	0 	0 	0 	0 	
-00:48.683	ID:1	5 	5 	0 	0 	0 	0 	0 	0 	0 	0 	0 	0 	0 	
-00:48.687	ID:1	6 	6 	0 	0 	0 	0 	0 	0 	0 	0 	0 	0 	0 	
-00:48.691	ID:1	7 	7 	0 	0 	0 	0 	0 	0 	0 	0 	0 	0 	0 	
-00:48.696	ID:1	8 	8 	0 	0 	0 	0 	0 	0 	0 	0 	0 	0 	0 	
-00:48.700	ID:1	9 	9 	0 	0 	0 	0 	0 	0 	0 	0 	0 	0 	0 	
-00:48.704	ID:1	10 	10 	0 	0 	0 	0 	0 	0 	0 	0 	0 	0 	0 	
-00:48.708	ID:1	11 	11 	0 	0 	0 	0 	0 	0 	0 	0 	0 	0 	0 	
-00:48.710	ID:1	diagonal prio 0-> 
-00:48.711	ID:1	diagonal 0-> 
-00:48.712	ID:1	diagonal prio 0-> 
-00:48.713	ID:1	diagonal prio 0-> 
-00:48.715	ID:1	diagonal prio 0-> 
-00:48.716	ID:1	diagonal prio 0-> 
-00:48.718	ID:1	diagonal prio 0-> 
-00:48.719	ID:1	diagonal prio 0-> 
-00:48.720	ID:1	diagonal prio 0-> 
-00:48.722	ID:1	diagonal prio 0-> 
-00:48.723	ID:1	diagonal prio 0-> 
-00:48.724	ID:1	diagonal prio 0-> 
-00:48.725	ID:1	min cost : 0 
-00:48.728	ID:1	[DBG : Knock     ] Password is correct! 
-00:48.731	ID:1	[DBG : Knock     ] Main finish 
-```
