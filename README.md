@@ -45,7 +45,7 @@ The ECG signal that the mote will be compression is the following signal of size
 * Receive mode/transmission mode is 950 times more expensive than using CPU time
 * That is why it is worth using more time on the CPU doing the compression and then on sending 75/256 = 29,29% of the signal to minimize the usage of the atenna
 * CPU time consumtion = 2659*26.1 uA = 69,399 mA
- * Currently the algortihm takes way to long (cos(SomeBigNumber) is very slow) 
+  * Currently the algortihm takes way to long (cos(SomeBigNumber) is very slow) 
 
 **Mean square error between the original signal and reconstructed signal**
 * From matlab: 
