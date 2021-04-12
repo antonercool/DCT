@@ -5,9 +5,9 @@ used. DCT-II transform of a length N signal x is given as:
 ![Screenshot](images/formular.PNG)
 
 <br/>
-where y_k is the k'th DCT coefficient of the signal, x, for a particular k. 
+where y_k is the k'th DCT coefficient of the signal, x, for a particular k.
 
-<br/>
+<br/> 
 
 The ECG signal that the mote will be compression is the following signal of size N=512
 
@@ -30,14 +30,15 @@ The ECG signal that the mote will be compression is the following signal of size
 
 
 ## DCT: N = 256 and M = 75
-** Results from recovered DCT coefficients from Telos B mote **
+*Results from recovered DCT coefficients from Telos B mote*
+
 ![Screenshot](images/M75.PNG)
 
-** execution time **
+*execution time*
 * 2659 seconds
 * 2659/60 = 44,31 mins 
 
-** energy consumption **
+*energy consumption*
 ![Screenshot](images/engergy.PNG)
 * Receive mode/transmission mode takes around the same amount of energy
 * Receive mode/transmission mode is 950 times more expensive than using CPU time
