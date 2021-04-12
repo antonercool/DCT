@@ -24,7 +24,30 @@ The ECG signal that the mote will be compression is the following signal of size
 
 *Optimization possibilities*
 * Pi/N is a constant, and should only be calculated once (**Implemented**)
-* When both n & k gets big, the compression wil have to take cosine of a big number meaning the algorithm will be slower and slower when we choose a higer signal size N. Instead of taking cosine of some big number, which is very slow. Take cosine of a number that are approximaly the same cosine output as the big number (**Not implemented**) 
+* When both n & k gets big, the compression will have to take cosine of a big number meaning the algorithm will be slower and slower when we choose a higer signal size N. Instead of taking cosine of some big number, which is very slow. Take cosine of a number that are approximaly the same cosine output as the big number (**Not implemented**) 
+
+
+
+## DCT: N = 256 and M = 75
+** Results from recovered DCT coefficients from Telos B mote**
+![Screenshot](images/M75.PNG)
+
+** execution time **
+* 2659 seconds
+* 2659/60 = 44,31 mins 
+
+** energy consumption **
+![Screenshot](images/engergy.PNG)
+* Receive mode/transmission mode takes around the same amount of energy
+* Receive mode/transmission mode is 950 times more expensive than using CPU time
+* That is why it is worth using more time on the CPU doing the compression and then on sending 75/256 = 29,29% of the signal to minimize the usage of the atenna
+* CPU time consumtion = 2659*26.1 uA = 69,399 mA
+ * Currently the algortihm takes way to long (cos(SomeBigNumber) is very slow) 
+
+** Mean square error between the original signal and reconstructed signal **
+* From matlab: 
+ * mse(x,x_recovered) = 0.1190
+
 
 
 ## Build commands ##
