@@ -1,8 +1,10 @@
 # Data Compression using Discrete Cosine Transform in TelosB Mote/Cooja #
 The following exercieses, data compression using discrete cosine transform (DCT) time-series signals. For testing electrocardiogram (ECG) signals will be
-used. DCT-II transform of a length N signal x is given as
+used. DCT-II transform of a length N signal x is given as:
 
 ![Screenshot](images/formular.PNG)
+
+<br/>
 where y_k is the k'th DCT coefficient of the signal, x, for a particular k. It can be also
 be rewritten in the matrix form as
 
