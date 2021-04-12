@@ -3,20 +3,12 @@
 #include<math.h>
 #include <stdlib.h>
 
-
-void print_float(float);
+/*
+    Prints a double with 4 fraction precision
+    $$Params$$
+        number : number to print
+*/
 void print_float_test(double number);
-
-
-
-void print_float(float number)
-{
-    int A;
-    float frac;
-    A = number;
-    frac = (number - A) * 100;
-    printf("%d.%02u ", A, (unsigned int)frac);
-}
 
 
 void print_float_test(double number)
