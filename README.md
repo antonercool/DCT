@@ -1,5 +1,9 @@
-## Knock Detector ##
-Knock detector program that utilizes dynamic time warping in order to compare to passwords recorded by a button on a telos b mote.
+# Data Compression using Discrete Cosine Transform in TelosB Mote/Cooja #
+The following exercieses, data compression using discrete cosine transform (DCT) time-series signals. For testing electrocardiogram (ECG) signals will be
+used. DCT-II transform of a length N signal x is given as
+
+![Screenshot](images/screenshot.png)
+
 
 ## Build commands ##
 Make and upload telos b
