@@ -83,9 +83,9 @@ When both n & k gets big, the compression will have to take cosine of a big numb
 ## Build commands ##
 Make and upload telos b
 ```
-  make TARGET=sky MOTES=/dev/ttyUSB0 knockDetector.upload login
+make TARGET=sky MOTES=/dev/ttyUSB0 knockDetector.upload login
 ```
- Check serial port:
+Check serial port:
 ```
 make TARGET=sky motelist
 ```
@@ -104,5 +104,5 @@ make TARGET=sky distclean
 local sky build
 
 ```
- make TARGET=sky
+make TARGET=sky
 ```
