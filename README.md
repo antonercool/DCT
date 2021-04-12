@@ -8,6 +8,7 @@ used. DCT-II transform of a length N signal x is given as:
 where y_k is the k'th DCT coefficient of the signal, x, for a particular k. 
 
 <br/>
+
 The ECG signal that the mote will be compression is the following signal of size N=512
 
 ![Screenshot](images/ecg.PNG)
@@ -29,7 +30,7 @@ The ECG signal that the mote will be compression is the following signal of size
 
 
 ## DCT: N = 256 and M = 75
-** Results from recovered DCT coefficients from Telos B mote**
+** Results from recovered DCT coefficients from Telos B mote **
 ![Screenshot](images/M75.PNG)
 
 ** execution time **
