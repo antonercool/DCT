@@ -39,7 +39,8 @@ The ECG signal that the mote will be compression is the following signal of size
 * 2659/60 = 44,31 mins 
 
 *energy consumption*
-![Screenshot](images/engergy.PNG)
+
+![Screenshot](images/energy.PNG)
 * Receive mode/transmission mode takes around the same amount of energy
 * Receive mode/transmission mode is 950 times more expensive than using CPU time
 * That is why it is worth using more time on the CPU doing the compression and then on sending 75/256 = 29,29% of the signal to minimize the usage of the atenna
