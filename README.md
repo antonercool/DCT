@@ -83,7 +83,7 @@ When both n & k gets big, the compression will have to take cosine of a big numb
 ## Build commands ##
 Make and upload telos b
 ```
-make TARGET=sky MOTES=/dev/ttyUSB0 knockDetector.upload login
+make TARGET=sky MOTES=/dev/ttyUSB0 DCT.upload login
 ```
 Check serial port:
 ```
@@ -91,7 +91,7 @@ make TARGET=sky motelist
 ```
 compile and upload program
 ```
-make TARGET=sky PORT=/dev/ttyUSB0 knockDetector.upload
+make TARGET=sky PORT=/dev/ttyUSB0 DCT.upload
 ```
 ssh on the sensor
 ```
