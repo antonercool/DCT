@@ -19,8 +19,8 @@ The ECG signal that the mote will be compression is the following signal of size
 ## Goal for this exercise
 
 * Implement and measure the execution time and energy consumption for the following cases, where N = Signal length, M = DCT coefficients 
-  * N = 256 and M = 75
-  * N = 512 and M = 120
+  * N = 256 and M = 120
+  * N = 512 and M = 75
 *  Measure the mean square error between the original signal and reconstructed signal for both the cases.
 
 *Optimization possibilities*
@@ -29,7 +29,7 @@ The ECG signal that the mote will be compression is the following signal of size
 
 
 # Results
-## DCT: N = 256 and M = 75
+## DCT: N = 256 and M = 120
 **Results from recovered DCT coefficients from Telos B mote**
 
 ![Screenshot](images/M75.PNG)
@@ -52,7 +52,7 @@ The ECG signal that the mote will be compression is the following signal of size
   * mse(x,x_recovered) = 0.1190
 
 
-## DCT: N = 512 and M = 120
+## DCT: N = 512 and M = 75
 **Results from recovered DCT coefficients from Telos B mote**
 
 ![Screenshot](images/M120.PNG)
