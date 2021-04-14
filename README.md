@@ -32,7 +32,7 @@ The ECG signal that the mote will be compression is the following signal of size
 ## DCT: N = 256 and M = 120
 **Results from recovered DCT coefficients from Telos B mote**
 
-![Screenshot](images/120.PNG)
+![Screenshot](images/M120.PNG)
 
 **Execution time**
 * 2659 seconds
@@ -55,7 +55,7 @@ The ECG signal that the mote will be compression is the following signal of size
 ## DCT: N = 512 and M = 75
 **Results from recovered DCT coefficients from Telos B mote**
 
-![Screenshot](images/75.PNG)
+![Screenshot](images/M75.PNG)
 
 **Execution time**
 * 14951  seconds
